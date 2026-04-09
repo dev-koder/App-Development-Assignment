@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="📷 Camera + Gallery"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="?attr/colorPrimary"
+        android:layout_marginBottom="16dp"
+        android:gravity="center" />
+
+    <!-- Button Container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/captureBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="📷 Capture"
+                android:layout_margin="4dp" />
+
+            <Button
+                android:id="@+id/selectFolderBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="📁 Folder"
+                android:layout_margin="4dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/refreshBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="🔄 Refresh"
+                android:layout_margin="4dp" />
+
+            <Button
+                android:id="@+id/deleteAllBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="🗑️ Delete All"
+                android:layout_margin="4dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Image Count -->
+    <TextView
+        android:id="@+id/imageCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Images: 0"
+        android:textSize="14sp"
+        android:textColor="?android:attr/textColorSecondary"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Gallery GridView -->
+    <GridView
+        android:id="@+id/galleryGrid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="3"
+        android:columnWidth="100dp"
+        android:horizontalSpacing="4dp"
+        android:verticalSpacing="4dp"
+        android:stretchMode="columnWidth"
+        android:gravity="center" />
+
+</LinearLayout>
